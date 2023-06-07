@@ -1,0 +1,124 @@
+.App {
+    height: 100vh;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.profile__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profile__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 107px 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+}
+.profile__form {
+    width: 410px;
+}
+.profile__label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(66, 66, 66, 1);
+    
+}
+.profile__label:last-of-type {
+    border: none;
+}
+.profile__input {
+    width: 85%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: right;
+    color: rgba(255, 255, 255, 1);
+}
+.profile__settings-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 204px 0 0 0;
+}
+.profile__edit {
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    padding-bottom: 16px;
+    cursor: pointer;
+}
+.profile__logout {
+    border: none;
+    background-color: transparent;
+    color: rgba(238, 52, 101, 1);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .profile__header {
+        padding: 0 0 96px 0;
+    }
+    .profile__settings-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 196px 0 0 0;
+    }
+    
+  }
+@media screen and (max-width: 475px) {
+    .profile__settings-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 0;
+    }
+    .profile__container {
+        width: calc(100% - 60px);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;  
+    }
+    .profile__form {
+        padding-top: 70px;
+        max-width: 100%;
+    }
+    .profile__header {
+        padding: 0 0 64px 0;
+    }
+}
+@media screen and (max-width: 205px) {
+    .profile__container {
+        width: calc(100% - 20px);
+    }
+    .profile__header {
+        padding: 0 0 64px 0;
+    }
+    
+  }  
