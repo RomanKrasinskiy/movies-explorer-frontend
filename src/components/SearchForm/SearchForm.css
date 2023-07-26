@@ -17,6 +17,8 @@
     padding: 70px 0 13px;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    transition: 0.2s linear;
 }
 .search__input {
     background-color: transparent;
@@ -50,6 +52,15 @@
 .search__submit:hover {
     opacity: 0.7;
 }
+.search__error {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.2;
+    color: #ee3465;
+    position: absolute;
+    bottom: -17px;
+    left: 0;    
+}
 .search__params {
     display: flex;
     justify-content: flex-start;
@@ -60,7 +71,7 @@
     gap: 14px;
     padding-top: 32px;
     transition: .5s;
-    
+    pointer-events: none;
 }
 .search__shorts {
     appearance: none;
@@ -72,6 +83,8 @@
     position: relative;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
     transition: 0.2s;
+    pointer-events: fill;
+
 }
 .search__shorts::before {
     width: 16px;

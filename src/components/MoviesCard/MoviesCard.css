@@ -1,14 +1,17 @@
 .card {
-    max-width: 364px;
+    width: 364px;
+    min-height: 271px;
     background-color: rgba(34, 34, 34, 1);
     list-style: none;
     position: relative;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
     transition: 0.7s;
+    overflow: auto;
+    /* border: 1px solid red; */
 }
 .card__title {
     margin: 0;
-    padding: 14px 0 0 14px;
+    padding: 14px 45px 0 14px;
     font-weight: 500;
     font-size: 15px;
     line-height: 18px;
@@ -20,6 +23,7 @@
     font-weight: 400;
     font-size: 11px;
     line-height: 13px;
+    color: rgba(139, 139, 139, 1);
 }
 .card-button-status {
     background-color: rgba(34, 34, 34, 0);
@@ -33,23 +37,44 @@
     right: 14px;
     cursor: pointer;
     transition: .5s ;
+    background-image: url('../../images/unsaved-ico.svg');
+
 }
 .card__saved {
     background-image: url('../../images/saved-ico.svg');
 }
-.card__unsaved {
+/* .card__unsaved {
     background-image: url('../../images/unsaved-ico.svg');
-}
+} */
 .card__img {
+    background-position: center;
     width: 100%;
+    height: 203px;
     object-fit: cover;
     margin: 0;
     padding: 0;
+    cursor: pointer;
+    float: left;
 }
-
-@media screen and (max-width: 310px) {
-    .card-button-status {
-    top: 33px;
-    right: 5px;
+@media screen and (max-width: 840px) {
+    .card {
+        min-height: 258px;
+        max-width: 339px;
     }
 }  
+@media screen and (max-width: 400px) {
+    .card {
+        min-height: 236px;
+        max-width: 300px;
+    }
+    .card-button-status {
+        top: 33px;
+        right: 5px;
+    }
+}  
+@media screen and (max-width: 310px) {
+    .card {
+        min-height: 136px;
+        max-width: 200px;
+    }
+} 
