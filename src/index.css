@@ -1,0 +1,12 @@
+@import url('./vendor/normalize.css');
+@import url('./vendor/fonts/fonts.css');
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color: rgba(32, 32, 32, 1);
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+}
+

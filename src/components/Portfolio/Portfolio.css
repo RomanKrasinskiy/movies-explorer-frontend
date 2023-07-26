@@ -1,0 +1,132 @@
+.portfolio {
+    padding: 51px 0 0 0;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portfolio__container {
+    position: relative;
+    width: calc(100% - 140px);
+    max-width: 1140px;
+    padding-bottom: 106px;
+}
+.portfolio__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(139, 139, 139, 1);
+}
+.portfolio__links {
+    padding: 0;
+    margin: 50px 0 0 0;
+}
+.portfolio__item {
+    cursor: pointer;
+    list-style: none;
+    border-bottom: 1px rgba(66, 66, 66, 1) solid;
+}
+.portfolio__item:last-child {
+    border-bottom: none;
+}
+.portfolio__link {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+.portfolio__link-name {
+    margin: 20px 0 19px 0;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -0.04em;
+}
+.background {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: calc(100% + 60px);
+    border-radius: 10px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 1s;
+}
+.portfolio__item_static {
+    background-image: url(../../images/how-to-learn.png);
+    object-fit: cover;
+    background-size:cover;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+.portfolio__item_adaptive {
+    background-image: url(../../images/russian-travel.png);
+    object-fit: cover;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.portfolio__item_single-page-app {
+    background-image: url(../../images/Mesto1.jpg);
+    object-fit: cover;
+    background-size:cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+ul li:last-of-type  {
+    border: none;
+}
+.portfolio__item:hover + .background {
+    opacity: 0.5;
+}
+@media screen and (max-width: 768px) {
+    .portfolio {
+        padding: 41px 0 0 0;
+    }
+    .portfolio__container {
+        width: calc(100% - 100px);
+        padding-bottom: 71px;
+    }
+    .portfolio__links {
+        margin: 30px 0 0 0;
+    }
+    .portfolio__title {
+        color: rgba(160, 160, 160, 1);
+    }
+    .portfolio__link-name {
+        font-size: 28px;
+    }
+    .portfolio__item {
+        border-bottom: 1px rgba(230, 230, 230, 1) solid;
+    }
+    .background {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .portfolio {
+        padding: 0;
+    }
+    .portfolio__container {
+        width: calc(100% - 28px);
+        padding-bottom: 71px;
+    }
+    .portfolio__title {
+        color: rgba(160, 160, 160, 1);
+        font-size: 14px;
+        line-height: 20px
+    }
+    .portfolio__links {
+        margin: 20px 0 0 0;
+    }
+    .portfolio__link-name {
+        font-size: 18px;
+        line-height: 28px;
+    }
+} 
