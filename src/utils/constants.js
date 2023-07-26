@@ -1,6 +1,5 @@
-const mainURL = 'http://localhost:3001';
-
-// const mainURL = 'https://api.mymesto.nomoredomains.monster';
+// const mainURL = 'http://localhost:3001';
+const mainURL = 'https://api.kinomovies.nomoredomains.monster';
 export const baseURLMovies = 'https://api.nomoreparties.co';
 
 export const apiMoviesConfig = {
@@ -11,7 +10,6 @@ export const apiMoviesConfig = {
   },
 }
 export const apiMainConfig = {
-  url: mainURL, // если не пригодится- удалить!
   movies: `${mainURL}/movies`,
   user: `${mainURL}/users/me`,
   signUp: `${mainURL}/signup`,
