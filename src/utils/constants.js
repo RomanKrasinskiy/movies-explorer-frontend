@@ -26,8 +26,6 @@ export const apiMainConfig = {
 export const regex_name = /^[a-zA-ZА-Яа-яЁё'\- ]{2,}$/
 export const regex_email = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
 
-
-
 export const DEVICE_PARAMS = {
   desktop: {
     minWidth: 1280,

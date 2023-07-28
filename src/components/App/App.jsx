@@ -11,7 +11,7 @@ import Login from '../Login/Login.jsx';
 import Register from '../Register/Register.jsx';
 import ErrorPage from '../ErrorPage/ErrorPage.jsx';
 import { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import Preloader from '../Preloader/Preloader';
 
 function App() {
@@ -138,13 +138,31 @@ function App() {
         <Routes>
           <Route
             path="/signup"
-            element={<Register onRegister={handleRegister} formError={formError}
-            />}
+            element={loggedIn 
+              ? <Navigate to='/' />
+              : <Register onRegister={handleRegister} formError={formError} />
+            }
           />
-          <Route path="/signin" element={<Login onLogin={handleLogin} formError={formError} />} />
+          <Route
+            path="/signin"
+            element={loggedIn 
+              ? <Navigate to='/' />
+              : <Login onLogin={handleLogin} formError={formError} />
+            }
+          />
           <Route exact path="/" element={<Main loggedIn={loggedIn} />} />
           <Route element={<ProtectedRoute loggedIn={loggedIn} />}>
-            <Route path="/profile" element={<Profile loggedIn={loggedIn} formError={formError} handleEditProfile={handleEditProfile} onSignOut={handleSignOut}/>} />
+            <Route
+              path="/profile"
+              element={
+                <Profile
+                  loggedIn={loggedIn}
+                  formError={formError}
+                  handleEditProfile={handleEditProfile}
+                  onSignOut={handleSignOut}
+                />
+              }
+            />
             <Route
               path="/movies"
               element={
@@ -163,14 +181,15 @@ function App() {
             <Route
               path="/saved-movies"
               element={
-              <SavedMovies 
-              loggedIn={loggedIn}
-              handleLikedMovie={handleLikedMovie}
-              setIsLoading={setIsLoading}
-              savedMovies={savedMovies}
-              handleDislikeMovie={handleDislikeMovie}
-              setSavedMovies={setSavedMovies}
-              />}
+                <SavedMovies
+                  loggedIn={loggedIn}
+                  handleLikedMovie={handleLikedMovie}
+                  setIsLoading={setIsLoading}
+                  savedMovies={savedMovies}
+                  handleDislikeMovie={handleDislikeMovie}
+                  setSavedMovies={setSavedMovies}
+                />
+              }
             />
           </Route>
           <Route
