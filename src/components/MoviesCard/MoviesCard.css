@@ -43,9 +43,9 @@
 .card__saved {
     background-image: url('../../images/saved-ico.svg');
 }
-/* .card__unsaved {
-    background-image: url('../../images/unsaved-ico.svg');
-} */
+.card__del {
+    background-image: url('../../images/del.svg');
+}
 .card__img {
     background-position: center;
     width: 100%;

@@ -1,4 +1,4 @@
-// const MAIN_URL = 'http://localhost:3001';
+// const MAIN_URL = 'http://localhost:3000';
 
 const MAIN_URL = 'https://api.kinomovies.nomoredomains.monster';
 export const BASE_URL_MOVIES = 'https://api.nomoreparties.co';

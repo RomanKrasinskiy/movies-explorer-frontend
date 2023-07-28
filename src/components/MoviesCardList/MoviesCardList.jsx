@@ -10,6 +10,7 @@ export default function MoviesCardList({
   handleLikedMovie,
   savedMovies,
   handleDislikeMovie,
+  plase,
 }) {
   const [deviceWidth, setDeviceWidth] = useState(window.screen.width);
   const [renderingMovies, setRenderingMovies] = useState({
@@ -73,6 +74,7 @@ export default function MoviesCardList({
                   handleLikedMovie={handleLikedMovie}
                   savedMovies={savedMovies}
                   handleDislikeMovie={handleDislikeMovie}
+                  plase={plase}
                 />
               );
             })}

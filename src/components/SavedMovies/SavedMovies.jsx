@@ -44,6 +44,7 @@ export default function SavedMovies({
             handleLikedMovie={handleLikedMovie}
             savedMovies={savedMovies}
             handleDislikeMovie={handleDislikeMovie}
+            plase={"saved-movies"}
           />
         </main>
         <Footer />

@@ -6,6 +6,7 @@ export default function MoviesCard({
   savedMovies,
   handleLikedMovie,
   handleDislikeMovie,
+  plase
 }) {
   const imageURl = movie.image.url
     ? `${BASE_URL_MOVIES}${movie.image.url}`
@@ -38,10 +39,8 @@ export default function MoviesCard({
     }
   };
 
-  const cardLikeButtonClassName = `card-button-status ${
-    isLiked && "card__saved"
-  }`;
-
+  const cardLikeButtonClassName = isLiked && `${plase==="saved-movies" ? "card__del": 'card__saved'}`;
+  
   return (
     <li className="card">
       <p className="card__title">{movie.nameRU}</p>
@@ -49,7 +48,7 @@ export default function MoviesCard({
       <button
         type="button"
         onClick={handleLikeClick}
-        className={cardLikeButtonClassName}
+        className={`card-button-status ${cardLikeButtonClassName}`}
       ></button>
       <img
         src={imageURl}
