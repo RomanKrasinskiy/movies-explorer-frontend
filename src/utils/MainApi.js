@@ -1,25 +1,25 @@
-import { apiMainConfig, baseURLMovies } from '../utils/constants';
+import { API_MAIN_CONFIG, BASE_URL_MOVIES } from '../utils/constants';
 import { chechResponse } from '../utils/chechResponse';
 
 export const getLikedMovies = async () => {
-  const res = await fetch(apiMainConfig.movies, {
-    headers: apiMainConfig.headers,
+  const res = await fetch(API_MAIN_CONFIG.movies, {
+    headers: API_MAIN_CONFIG.headers,
     credentials: 'include',
   })
   return chechResponse(res);
 }
 
 export const getInfoProfile = async () => {
-  const res = await fetch(apiMainConfig.user, {
-    headers: apiMainConfig.headers,
+  const res = await fetch(API_MAIN_CONFIG.user, {
+    headers: API_MAIN_CONFIG.headers,
     credentials: 'include',
   })
   return chechResponse(res);
 }
 export const editInfoProfile = async ({ name, email }) => {
-  const res = await fetch(apiMainConfig.user, {
+  const res = await fetch(API_MAIN_CONFIG.user, {
     method: 'PATCH',
-    headers: apiMainConfig.headers,
+    headers: API_MAIN_CONFIG.headers,
     credentials: 'include',
     body: JSON.stringify({
       name: `${name}`,
@@ -39,12 +39,12 @@ export const sendSavedMovie = async (movie) => {
     trailerLink,
     nameRU,
     nameEN, } = movie;
-  const image = baseURLMovies + movie.image.url;
-  const thumbnail = baseURLMovies + movie.image.formats.thumbnail.url;
+  const image = BASE_URL_MOVIES + movie.image.url;
+  const thumbnail = BASE_URL_MOVIES + movie.image.formats.thumbnail.url;
   const id = movie.id;
-  const res = await fetch(apiMainConfig.movies, {
+  const res = await fetch(API_MAIN_CONFIG.movies, {
     method: 'POST',
-    headers: apiMainConfig.headers,
+    headers: API_MAIN_CONFIG.headers,
     body: JSON.stringify({
       country,
       director,
@@ -63,9 +63,9 @@ export const sendSavedMovie = async (movie) => {
   return chechResponse(res);
 };
 export const dislikeMovie = async (id) => {
-  const res = await fetch(`${apiMainConfig.movies}/${id}`, {
+  const res = await fetch(`${API_MAIN_CONFIG.movies}/${id}`, {
     method: 'DELETE',
-    headers: apiMainConfig.headers,
+    headers: API_MAIN_CONFIG.headers,
     credentials: 'include',
   });
   return chechResponse(res);

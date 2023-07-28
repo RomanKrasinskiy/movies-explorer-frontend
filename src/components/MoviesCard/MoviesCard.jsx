@@ -1,5 +1,5 @@
 import "./MoviesCard.css";
-import { baseURLMovies } from "../../utils/constants";
+import { BASE_URL_MOVIES } from "../../utils/constants";
 
 export default function MoviesCard({
   movie,
@@ -8,7 +8,7 @@ export default function MoviesCard({
   handleDislikeMovie,
 }) {
   const imageURl = movie.image.url
-    ? `${baseURLMovies}${movie.image.url}`
+    ? `${BASE_URL_MOVIES}${movie.image.url}`
     : movie.image;
 
   const openTrailer = () => {

@@ -1,30 +1,31 @@
-// const mainURL = 'http://localhost:3001';
+// const MAIN_URL = 'http://localhost:3001';
 
-const mainURL = 'https://api.kinomovies.nomoredomains.monster';
-export const baseURLMovies = 'https://api.nomoreparties.co';
+const MAIN_URL = 'https://api.kinomovies.nomoredomains.monster';
+export const BASE_URL_MOVIES = 'https://api.nomoreparties.co';
 
-export const apiMoviesConfig = {
-  url: `${baseURLMovies}/beatfilm-movies`,
+export const API_MOVIES_CONFIG = {
+  url: `${BASE_URL_MOVIES}/beatfilm-movies`,
   headers: {
     Accept: 'application/json',
     "Content-Type": "application/json",
   },
 }
-export const apiMainConfig = {
-  url: mainURL, // если не пригодится- удалить!
-  movies: `${mainURL}/movies`,
-  user: `${mainURL}/users/me`,
-  signUp: `${mainURL}/signup`,
-  signIn: `${mainURL}/signin`,
-  signOut: `${mainURL}/signout`,
+export const API_MAIN_CONFIG = {
+  movies: `${MAIN_URL}/movies`,
+  user: `${MAIN_URL}/users/me`,
+  signUp: `${MAIN_URL}/signup`,
+  signIn: `${MAIN_URL}/signin`,
+  signOut: `${MAIN_URL}/signout`,
   headers: {
     Accept: 'application/json',
     "Content-Type": "application/json",
   },
 }
 
-export const regex_name = /^[a-zA-ZА-Яа-яЁё'\- ]{2,}$/
-export const regex_email = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
+export const REGEX_NAME = /^[a-zA-ZА-Яа-яЁё'\- ]{2,}$/
+export const REGEX_EMAIL = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
+
+export const SHORTS_DURATION = 40
 
 export const DEVICE_PARAMS = {
   desktop: {

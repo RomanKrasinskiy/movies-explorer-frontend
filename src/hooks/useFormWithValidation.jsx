@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 // import isEmail from 'validator/es/lib/isEmail';
-import { regex_name, regex_email } from "../utils/constants";
+import { REGEX_NAME, REGEX_EMAIL } from "../utils/constants";
 
 //хук управления формой и валидации формы
 export function useFormWithValidation(inputValues) {
@@ -26,14 +26,14 @@ export function useFormWithValidation(inputValues) {
         [name]: "Имя должно быть не менее 2 символов",
       }));
       setIsValid(false);
-    } else if (name === "name" && !regex_name.test(value)) {
+    } else if (name === "name" && !REGEX_NAME.test(value)) {
       setErrors((state) => ({
         ...state,
         [name]: "Имя может содержать только буквы, пробел и дефис",
       }));
       setIsValid(false);
       return;
-    } else if (name === "email" && !regex_email.test(value)) {
+    } else if (name === "email" && !REGEX_EMAIL.test(value)) {
       setErrors((state) => ({
         ...state,
         [name]: "Некорректный e-mail. Проверьте формат",

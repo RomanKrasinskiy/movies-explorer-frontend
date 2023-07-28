@@ -1,10 +1,10 @@
-import { apiMainConfig } from '../utils/constants';
+import { API_MAIN_CONFIG } from '../utils/constants';
 import { chechResponse } from '../utils/chechResponse';
 
 export const signUp = async ({ name, email, password }) => {
-  const res = await fetch(apiMainConfig.signUp, {
+  const res = await fetch(API_MAIN_CONFIG.signUp, {
     method: 'POST',
-    headers: apiMainConfig.headers,
+    headers: API_MAIN_CONFIG.headers,
     body: JSON.stringify({
       name: `${name}`,
       password: `${password}`,
@@ -16,9 +16,9 @@ export const signUp = async ({ name, email, password }) => {
 };
 
 export const signIn = async ({ email, password }) => {
-  const res = await fetch(apiMainConfig.signIn, {
+  const res = await fetch(API_MAIN_CONFIG.signIn, {
     method: 'POST',
-    headers: apiMainConfig.headers,
+    headers: API_MAIN_CONFIG.headers,
     credentials: 'include',
     body: JSON.stringify({
       password: `${password}`,
@@ -29,18 +29,18 @@ export const signIn = async ({ email, password }) => {
 };
 
 export const signOut = async () => {
-  const res = await fetch(apiMainConfig.signOut, {
+  const res = await fetch(API_MAIN_CONFIG.signOut, {
     method: 'DELETE',
-    headers: apiMainConfig.headers,
+    headers: API_MAIN_CONFIG.headers,
     credentials: 'include',
   });
   return chechResponse(res);
 };
 
 export const checkToken = async () => {
-  const res = await fetch(apiMainConfig.user, {
+  const res = await fetch(API_MAIN_CONFIG.user, {
     method: 'GET',
-    headers: apiMainConfig.headers,
+    headers: API_MAIN_CONFIG.headers,
     credentials: 'include',
   });
   return chechResponse(res);
