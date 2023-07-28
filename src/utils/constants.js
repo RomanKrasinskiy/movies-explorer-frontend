@@ -25,7 +25,7 @@ export const API_MAIN_CONFIG = {
 export const REGEX_NAME = /^[a-zA-ZА-Яа-яЁё'\- ]{2,}$/
 export const REGEX_EMAIL = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/
 
-export const SHORTS_DURATION = 40
+export const SHORTS_DURATION = 40;
 
 export const DEVICE_PARAMS = {
   desktop: {

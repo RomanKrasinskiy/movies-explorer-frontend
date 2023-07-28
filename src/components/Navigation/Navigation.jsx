@@ -1,4 +1,3 @@
-import React from "react";
 import "./Navigation.css";
 import { NavLink } from "react-router-dom";
 import Burger from "../Burger/Burger";

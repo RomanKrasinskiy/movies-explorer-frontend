@@ -1,4 +1,3 @@
-import React from "react";
 import "./ErrorPage.css";
 import { Link, useNavigate } from "react-router-dom";
 

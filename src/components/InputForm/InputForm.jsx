@@ -1,4 +1,3 @@
-import React from "react";
 import "./InputForm.css";
 
 export default function InputForm({

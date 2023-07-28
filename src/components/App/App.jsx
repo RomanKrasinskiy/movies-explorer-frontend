@@ -19,7 +19,6 @@ function App() {
   const location = useLocation();
   const [loggedIn, setLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [userEmail, setUserEmail] = useState("");
   const [savedMovies, setSavedMovies] = useState([]);
   const [formError, setFormError] = useState({ isError: false, text: '' });
   const storageSearch = localStorage.getItem('movieSearch');
@@ -53,7 +52,6 @@ function App() {
       setIsLoading(true)
       checkToken(jwt)
         .then((res) => {
-          setUserEmail(res.email);
           setLoggedIn(true);
           const path = location.pathname;
           navigate(path);
@@ -73,7 +71,6 @@ function App() {
     setIsLoading(true)
     signIn({email, password})
       .then((data) => {
-        setUserEmail({email});
         localStorage.setItem("token", data.token);
         setLoggedIn(true);
         navigate("/movies");

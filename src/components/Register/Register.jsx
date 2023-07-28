@@ -4,7 +4,7 @@ import InputForm from "../InputForm/InputForm";
 import { useFormWithValidation } from "../../hooks/useFormWithValidation";
 
 export default function Register({ onRegister, formError }) {
-  const { values, handleChange, resetForm, errors, isValid } =
+  const { values, handleChange, errors, isValid } =
     useFormWithValidation({ name: "", email: "", password: "" });
 
   const handleSubmit = (e) => {

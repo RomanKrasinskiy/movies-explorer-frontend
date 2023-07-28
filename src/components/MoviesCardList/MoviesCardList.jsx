@@ -1,5 +1,4 @@
 import "./MoviesCardList.css";
-// import { Route, Routes, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import MoviesCard from "../MoviesCard/MoviesCard";
 import ElseMoviesCard from "../ElseMoviesCard/ElseMoviesCard";

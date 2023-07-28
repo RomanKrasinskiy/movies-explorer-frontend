@@ -10,7 +10,7 @@ export default function SearchForm({
 }) {
   const currentUser = useContext(CurrentUserContext);
   const [errorQuery, setErrorQuery] = useState("");
-  const { values, handleChange, resetForm, errors, isValid, setIsValid } =
+  const { values, handleChange, isValid, setIsValid } =
     useFormWithValidation({ search: "" });
   const [isChecked, setIsChecked] = useState(false);
 

@@ -4,7 +4,7 @@ import InputForm from "../InputForm/InputForm";
 import { useFormWithValidation } from "../../hooks/useFormWithValidation";
 
 export default function Login({ onLogin, formError }) {
-  const { values, handleChange, resetForm, errors, isValid } =
+  const { values, handleChange, errors, isValid } =
     useFormWithValidation({ name: "", email: "", password: "" });
 
   const handleSubmit = (e) => {
@@ -48,7 +48,6 @@ export default function Login({ onLogin, formError }) {
             required
             label="Пароль"
             spanText={errors.password}
-            // temporaryClass='input-form__input_error'
             minLength={1}
             value={values.password}
             onChange={handleChange}

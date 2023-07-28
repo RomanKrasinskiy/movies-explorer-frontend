@@ -6,7 +6,7 @@ import { useFormWithValidation } from "../../hooks/useFormWithValidation";
 
 export default function Profile({ formError, handleEditProfile, onSignOut }) {
   const currentUser = useContext(CurrentUserContext);
-  const { values, handleChange, resetForm, errors, isValid, setIsValid } =
+  const { values, handleChange, isValid, setIsValid } =
     useFormWithValidation({ name: currentUser.name, email: currentUser.email });
 
   const [isEditable, setIsEditable] = useState(false);

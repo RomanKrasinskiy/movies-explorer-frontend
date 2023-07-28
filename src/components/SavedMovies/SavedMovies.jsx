@@ -3,18 +3,14 @@ import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import Footer from "../Footer/Footer";
-import ElseMoviesCard from "../ElseMoviesCard/ElseMoviesCard";
 import { filteringMovies } from "../../utils/filteringMovies";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 
 export default function SavedMovies({
-  setIsLoading,
   loggedIn,
-  foundMovies,
   handleLikedMovie,
   savedMovies,
   handleDislikeMovie,
-  setSavedMovies,
 }) {
   const [renderingMovies, setRenderingMovies] = useState([]);
   const [searchError, setSearchError] = useState({ isError: false, text: "" });

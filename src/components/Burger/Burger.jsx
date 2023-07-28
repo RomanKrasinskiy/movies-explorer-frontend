@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Burger.css";
 
@@ -20,7 +20,6 @@ export default function Burger() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleButton = () => {
