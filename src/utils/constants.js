@@ -8,10 +8,10 @@ export const apiMoviesConfig = {
   headers: {
     Accept: 'application/json',
     "Content-Type": "application/json",
-    'Access-Control-Allow-Origin': '*',
   },
 }
 export const apiMainConfig = {
+  url: mainURL, // если не пригодится- удалить!
   movies: `${mainURL}/movies`,
   user: `${mainURL}/users/me`,
   signUp: `${mainURL}/signup`,
@@ -20,8 +20,6 @@ export const apiMainConfig = {
   headers: {
     Accept: 'application/json',
     "Content-Type": "application/json",
-    'Access-Control-Allow-Origin': '*',
-    
   },
 }
 
