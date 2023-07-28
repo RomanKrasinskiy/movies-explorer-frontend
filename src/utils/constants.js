@@ -1,4 +1,5 @@
 // const mainURL = 'http://localhost:3001';
+
 const mainURL = 'https://api.kinomovies.nomoredomains.monster';
 export const baseURLMovies = 'https://api.nomoreparties.co';
 
@@ -7,6 +8,7 @@ export const apiMoviesConfig = {
   headers: {
     Accept: 'application/json',
     "Content-Type": "application/json",
+    'Access-Control-Allow-Origin': '*',
   },
 }
 export const apiMainConfig = {
@@ -18,6 +20,8 @@ export const apiMainConfig = {
   headers: {
     Accept: 'application/json',
     "Content-Type": "application/json",
+    'Access-Control-Allow-Origin': '*',
+    
   },
 }
 
