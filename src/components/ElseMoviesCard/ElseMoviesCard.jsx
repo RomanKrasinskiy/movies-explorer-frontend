@@ -1,14 +1,20 @@
-import './ElseMoviesCard.css';
-import React from 'react';
+import "./ElseMoviesCard.css";
+import React from "react";
 
-export default function ElseMoviesCard({ isActive}) {
+export default function ElseMoviesCard({ isActive, handleLoadElseCard }) {
   return (
-    <section className='else-movies'>
-      
-    {isActive?
-      <button className='else-movies__button_active' type='submit'>Ещё</button>
-    : ''
-    }  
+    <section className="else-movies">
+      {isActive ? (
+        <button
+          className="else-movies__button_active"
+          type="submit"
+          onClick={handleLoadElseCard}
+        >
+          Ещё
+        </button>
+      ) : (
+        ""
+      )}
     </section>
-  )
+  );
 }

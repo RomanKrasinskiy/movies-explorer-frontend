@@ -27,6 +27,15 @@
     line-height: 29px;
     text-align: center;
 }
+.profile-form__form-success {
+    color: rgba(61, 220, 132, 1);
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 59px;
+    padding-bottom: 20px;
+}
 .profile__form {
     width: 410px;
 }

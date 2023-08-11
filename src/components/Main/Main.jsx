@@ -1,17 +1,17 @@
-import './Main.css'
-import Header from '../Header/Header';
-import Promo from '../Promo/Promo';
-import AboutProject from '../AboutProject/AboutProject';
-import AboutMe from '../AboutMe/AboutMe';
-import Techs from '../Techs/Techs';
-import Portfolio from '../Portfolio/Portfolio'
-import Footer from '../Footer/Footer';
-import React from 'react';
+import "./Main.css";
+import Header from "../Header/Header";
+import Promo from "../Promo/Promo";
+import AboutProject from "../AboutProject/AboutProject";
+import AboutMe from "../AboutMe/AboutMe";
+import Techs from "../Techs/Techs";
+import Portfolio from "../Portfolio/Portfolio";
+import Footer from "../Footer/Footer";
+import React from "react";
 
-export default function Main() {
+export default function Main({ loggedIn }) {
   return (
     <>
-      <Header type="landing" loggedIn={false} />
+      <Header type="landing" loggedIn={loggedIn} />
       <main className="page">
         <Promo />
         <AboutProject />
@@ -23,4 +23,3 @@ export default function Main() {
     </>
   );
 }
-
