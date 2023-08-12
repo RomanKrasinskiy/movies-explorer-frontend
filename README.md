@@ -1,40 +1,3 @@
-## English
-
-# Movies Explorer - Frontend
-This repository contains the frontend code for the project. The project is a web application developed using React.
-
-# Description
-The frontend project focuses on creating an intuitive and user-friendly interface for the web application. It implements features such as registration, login, profile editing, and managing saved movies. The project utilizes asynchronous requests to communicate with the API backend.
-
-## Live Demo
-Check out the [live demo](https://kinomovies.nomoreparties.sbs) of the project to see it in action.
-
-## Backend
-Check out the [backend of this project](https://github.com/RomanKrasinskiy/movies-explorer-api.git) made with **Node.js**, **Express.js** and **MongoDB**.
-
-## Features
-* Designed React components.
-* Developed logic for registration, login, profile editing, and saved movies pages.
-* Implemented asynchronous requests to the server API.
-* Managed authorized and unauthorized states, allowing users to save movies to their profile.
-* Implemented client-side filtering.
-
-## Installation
-Clone the repository: 
-
-```
-git clone https://github.com/RomanKrasinskiy/movies-explorer-frontend.git
-```
-Install dependencies: 
-```
-npm install
-```
-Run the project: 
-```
-npm start
-```
-
-
 ## Русский
 
 # Кинопоиск - Фронтенд часть
@@ -69,6 +32,43 @@ git clone https://github.com/RomanKrasinskiy/movies-explorer-frontend.git
 npm install
 ```
 Запустите проект:
+```
+npm start
+```
+
+
+## English
+
+# Movies Explorer - Frontend
+The repository contains the frontend code of a web application developed for movie enthusiasts. It allows users to find information about various movies, save them to their account, and watch trailers.
+
+# Description and Functionality
+The project consists of a portfolio landing page of the author, separate registration and login pages with corresponding field validation. Upon successful login, the user gains access to additional pages: "Movies", "Saved Movies", and "Account". After successful login, the user is redirected to the base page - "Movies", where the main movie search is performed using a third-party API. The ability to search for short films only (with a duration of up to 40 minutes) has been implemented. Simply enter a search query in the search field, and movie cards will appear with the option to click on a preview, leading to the movie's trailer on YouTube. Clicking on the like icon (bookmark icon) will save the movie card, which will then be displayed on a separate "Saved Movies" page. Any movie can be easily removed from any page by clicking the like icon or the cross icon. The "Account" page allows users to edit their username and email.
+
+## Live Demo
+Check out the [live demo](https://kinomovies.nomoreparties.sbs) of the project to see it in action.
+
+## Backend
+Check out the [backend of this project](https://github.com/RomanKrasinskiy/movies-explorer-api.git) made with **Node.js**, **Express.js** and **MongoDB**.
+
+## Features
+* Designed React components.
+* Developed logic for registration, login, profile editing, and saved movies pages.
+* Implemented asynchronous requests to the server API.
+* Managed authorized and unauthorized states, allowing users to save movies to their profile.
+* Implemented client-side filtering.
+
+## Installation
+Clone the repository: 
+
+```
+git clone https://github.com/RomanKrasinskiy/movies-explorer-frontend.git
+```
+Install dependencies: 
+```
+npm install
+```
+Run the project: 
 ```
 npm start
 ```
